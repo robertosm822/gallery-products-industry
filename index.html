@@ -147,8 +147,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
         // Preenchendo o modal com os dados do produto
         document.getElementById("productModalLabel").textContent = title;
+        
+        //document.getElementById("productModalDescription").textContent = description;
         if(title === "Tubos de Aço Carbono"){
-            document.getElementById("productModalLabel").textContent = `<p>Os tubos de aço carbono são fabricados com ou sem costura, pretos ou galvanizados e são utilizados para condução de diversos tipos de fluidos, instalações de sistemas de combate a incêndio, montagem de estruturas metálicas, andaimes, corrimãos etc.</p>
+            console.log("Mostrar conteudo da descricao");
+            document.getElementById("productModalDescription").textContent = `<p>Os tubos de aço carbono são fabricados com ou sem costura, pretos ou galvanizados e são utilizados para condução de diversos tipos de fluidos, instalações de sistemas de combate a incêndio, montagem de estruturas metálicas, andaimes, corrimãos etc.</p>
                 <p>Na KS você também encontra tubos de aço carbono nas seguintes especificações:</p>
                 <ul>
                     <li>C/C e S/C preto</li>
@@ -157,7 +160,6 @@ document.addEventListener("DOMContentLoaded", function() {
                 </ul>
             `;
         }
-        document.getElementById("productModalDescription").textContent = description;
         document.getElementById("productModalImage").src = image;
         document.getElementById("productModalImage").alt = title;
     });
