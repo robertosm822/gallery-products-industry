@@ -160,6 +160,32 @@ document.addEventListener("DOMContentLoaded", function() {
                 </ul>
             `;
         }
+        if(title === "Tubos de Aço Inox"){
+            document.getElementById("productModalDescription").innerHTML = `Tubos aço inox com e sem costura, escovados ou polidos, utilizados principalmente na indústria farmacêutica, indústria alimentícia, indústria automobilística, utensílios domésticos, corrimões, etc.
+            <br>
+            Na KS você também encontra tubos de aço inox nas seguintes especificações:<br>
+            <ul>
+            <li>C/C e S/C</li>
+            <li>Escovados ou polidos</li>
+            <li>Extremidades lisas</li>
+            <li>Extremidades biseladas</li>
+            <li>Extremidades roscadas</li>
+            </ul>
+            `;
+        }
+        if(title === "Conexões de aço carbono"){
+            document.getElementById("productModalDescription").innerHTML = `
+            Conexões de aço carbono são utilizadas na montagem de linhas para condução de diversos tipos de fluidos, instalações de sistemas de combate a incêndio, etc
+            <br>
+            Na KS você também encontra conexões de aço carbono nas seguintes especificações:
+            <br>
+            <ul>
+            <li>Extremidades roscáveis (NPT e BSP)</li>
+            <li>Extremidades de solda de topo biseladas (BW)</li>
+            <li>Extremidade de solda de encaixe (SW)</li>
+            </ul>
+            `;
+        }
         document.getElementById("productModalImage").src = image;
         document.getElementById("productModalImage").alt = title;
     });
