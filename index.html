@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Catálogo de Produtos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa; /* Fundo levemente cinza no site inteiro */
+        }
+    
+        .catalogo-container {
+            background-color: #e9ecef; /* Cinza claro */
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra leve */
+        }
+    
+        .card {
+            border: none;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+    
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+    
+        .card img {
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+        #logo-default {
+            filter:drop-shadow(0 0 10px rgb(255, 255, 255));
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container">
+        <a class="navbar-brand" href="#">
+            <img id="logo-default" src="https://www.kstubos.com.br/wp-content/uploads/2022/08/logo-kstubos-completo-1.svg" width="200" alt="">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                <li class="nav-item"><a class="nav-link active" href="#">Produtos</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+
+<section class="container my-5 catalogo-container">
+    <h2 class="text-center mb-4">Catálogo de Produtos</h2>
+    <div class="row">
+        <!-- Produto 1 -->
+        <div class="col-md-4 mb-4">
+            <div class="card shadow-sm">
+                <img src="https://www.kstubos.com.br/wp-content/uploads/2022/10/Tubos-de-aco-KS-Tubos.jpg.webp" class="card-img-top" alt="Tubos de aço carbono">
+                <div class="card-body">
+                    <h5 class="card-title">Tubos de Aço Carbono</h5>
+                    <p class="card-text">Usado na condução de fluidos, combate a incêndio e estruturas metálicas.</p>
+                    <button class="btn btn-primary" 
+                            data-bs-toggle="modal" 
+                            data-bs-target="#productModal" 
+                            data-title="Tubos de Aço Carbono" 
+                            data-description="Tubos de aço carbono são usados na condução de fluidos, combate a incêndio e montagem de estruturas metálicas."
+                            data-image="https://www.kstubos.com.br/wp-content/uploads/2022/10/Tubos-de-aco-KS-Tubos.jpg.webp">
+                        SAIBA MAIS
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Produto 2 -->
+        <div class="col-md-4 mb-4">
+            <div class="card shadow-sm">
+                <img src="https://www.kstubos.com.br/wp-content/uploads/2022/10/Tubos-de-aco-inox-KS-tubos.jpg.webp" class="card-img-top" alt="Tubos de aço inox">
+                <div class="card-body">
+                    <h5 class="card-title">Tubos de Aço Inox</h5>
+                    <p class="card-text">Utilizados na indústria farmacêutica, alimentícia e automotiva.</p>
+                    <button class="btn btn-primary" 
+                            data-bs-toggle="modal" 
+                            data-bs-target="#productModal" 
+                            data-title="Tubos de Aço Inox" 
+                            data-description="Fabricados com e sem costura, utilizados na indústria farmacêutica, alimentícia, automotiva e doméstica."
+                            data-image="https://www.kstubos.com.br/wp-content/uploads/2022/10/Tubos-de-aco-inox-KS-tubos.jpg.webp">
+                        SAIBA MAIS
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Produto 3 -->
+        <div class="col-md-4 mb-4">
+            <div class="card shadow-sm">
+                <img src="https://www.kstubos.com.br/wp-content/uploads/2022/10/Conexoes-de-aco-carbono-03-KS-tubos.jpg.webp" class="card-img-top" alt="Conexões de aço carbono">
+                <div class="card-body">
+                    <h5 class="card-title">Conexões de Aço Carbono</h5>
+                    <p class="card-text">Utilizadas na montagem de linhas para fluidos e combate a incêndio.</p>
+                    <button class="btn btn-primary" 
+                            data-bs-toggle="modal" 
+                            data-bs-target="#productModal" 
+                            data-title="Conexões de Aço Carbono" 
+                            data-description="Utilizadas na montagem de linhas para condução de fluidos e sistemas de combate a incêndio."
+                            data-image="https://www.kstubos.com.br/wp-content/uploads/2022/10/Conexoes-de-aco-carbono-03-KS-tubos.jpg.webp">
+                        SAIBA MAIS
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Modal Dinâmico -->
+<div class="modal fade" id="productModal" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="productModalLabel"></h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <img id="productModalImage" src="" class="img-fluid mb-3" alt="">
+                <p id="productModalDescription"></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    var productModal = document.getElementById("productModal");
+
+    productModal.addEventListener("show.bs.modal", function(event) {
+        var button = event.relatedTarget; // Botão que acionou o modal
+        var title = button.getAttribute("data-title");
+        var description = button.getAttribute("data-description");
+        var image = button.getAttribute("data-image");
+
+        // Preenchendo o modal com os dados do produto
+        document.getElementById("productModalLabel").textContent = title;
+        document.getElementById("productModalDescription").textContent = description;
+        document.getElementById("productModalImage").src = image;
+        document.getElementById("productModalImage").alt = title;
+    });
+});
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
